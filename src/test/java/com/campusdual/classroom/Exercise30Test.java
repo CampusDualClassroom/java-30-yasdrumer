@@ -9,7 +9,13 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-class Exercise29Test {
+class Exercise30Test {
+    @Test
+    @DisplayName("Test if divisionWithCustomException method throws a custom exception")
+    void testThrowCustomException() {
+        assertThrows(DivisionByZeroException.class ,() -> Exercise30.divisionWithCustomException(3,0), "Exception not throwed");
+    }
+
     @Test
     @DisplayName("Test if main method does not throws any exception")
     void testDoesNotLaunchAnyException() {
